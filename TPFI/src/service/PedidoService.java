@@ -15,12 +15,6 @@ public class PedidoService extends GenericService<Pedido> {
         super(pedidoDAO);
         this.pedidoDAO = pedidoDAO;
     }
-
-    // Métodos adicionales específicos de Pedido (si los necesitás)
-    // Por ejemplo:
-    // public List<Pedido> getByEstado(Pedido.Estado estado) throws Exception {
-    //     return pedidoDAO.getByEstado(estado);
-    // }
-
 }
+
 
