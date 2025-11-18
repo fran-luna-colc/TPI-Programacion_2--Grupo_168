@@ -15,12 +15,7 @@ public class EnvioService extends GenericService<Envio> {
         super(envioDAO);
         this.envioDAO = envioDAO;
     }
-
-    // Métodos específicos para Envio (si en el futuro necesitás)
-    // Ejemplo:
-    // public List<Envio> getByEstado(Envio.Estado estado) throws Exception {
-    //     return envioDAO.getByEstado(estado);
-    // }
 }
+
 
 
