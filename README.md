@@ -1,4 +1,5 @@
 # TPI-Programacion_2--Grupo_168
+
 Trabajo Practico Integrador - Grupo 168  
 
 Sistema de Gestión de Pedidos y Envíos (Java + MySQL)
@@ -6,22 +7,26 @@ Este proyecto implementa una aplicación de consola para gestionar Pedidos y Env
  Incluye además manejo de transacciones con commit y rollback para asegurar integridad de datos.
 
 
-Selección del Dominio y Justificación
+# Selección del Dominio y Justificación
 Para el desarrollo del Trabajo Práctico Integrador, se ha seleccionado el dominio "Pedido → Envío". Esta decisión se fundamenta en la importancia crítica que poseen los sistemas de logística y transporte dentro del ecosistema del comercio electrónico. Dichos sistemas no sólo gestionan el traslado físico de las mercancías, sino que son esenciales para la trazabilidad, la notificación de estados y la confirmación de entrega, asegurando así la integridad del ciclo de venta.
 
-Requisitos
-Software
+
+# Requisitos:
+
+# Software:
+
 Java 17 o superior.
 MySQL 8.x.
 Driver JDBC MySQL (mysql-connector-j).
 IDE (IntelliJ, NetBeans, Eclipse) o terminal.
 
 
-Configuración necesaria
-En el archivo:
+# Configuración necesaria
+
+-En el archivo:
 config/DatabaseConnection.java
 
-Completar con las credenciales de tu entorno MySQL:
+-Completar con las credenciales de tu entorno MySQL:
 
 private static final String URL = "jdbc:mysql://localhost:3306/tpiprogra2";
 private static final String USER = "root";
@@ -30,11 +35,10 @@ private static final String PASSWORD = "";
 
 
 
-Pasos de creación de base (SQL)
+#Pasos de creación de base (SQL)
 
 CREATE DATABASE IF NOT EXISTS tpiprogra2;
 USE tpiprogra2;
-
 
 CREATE TABLE envio (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -64,11 +68,9 @@ CREATE TABLE pedido (
 );
 
 
+#Datos de prueba
 
-
-Datos de prueba
-
-use tpiprogra2;
+USE tpiprogra2;
 
 INSERT INTO envio (
     eliminado, tracking, empresa, tipo, costo, fechaDespacho, fechaEstimada, estado
@@ -100,7 +102,7 @@ INSERT INTO pedido (
 (FALSE, 'PED-010', '2025-01-07', 'Tomás Herrera', 18700.00, 'ENVIADO', 10);
 
 
-Pasos para la ejecución
+# Pasos para la ejecución
 
 Crear Base de datos mediante el script en MySQL.
 Carga de datos de prueba mediante el mismo script que el paso previo.
@@ -108,8 +110,10 @@ Cargar librerías.
 Ejecutar la clase Main para correr el programa.
 
 
-Flujo de uso del sistema
+# Flujo de uso del sistema
+
 Una vez iniciado, se muestra un menú con las opciones principales:
+
 Pedidos
 Listar pedidos
 Crear pedido
@@ -126,22 +130,25 @@ Eliminar envío
 Buscar envío por ID
 
 
-El sistema guía al usuario paso a paso por consola.
-En la creación de un pedido, se debe elegir un envío existente, manteniendo consistencia referencial.
+-El sistema guía al usuario paso a paso por consola.
+-En la creación de un pedido, se debe elegir un envío existente, manteniendo consistencia referencial.
 
 
-Demostración de transacciones
-El servicio de pedidos incluye manejo de:
-STARTTRANSACTION
-COMMIT
-ROLLBACK
+# Demostración de transacciones
+
+- El servicio de pedidos incluye manejo de:
+
+* STARTTRANSACTION
+* COMMIT
+* ROLLBACK
 
 
-Para demostrar rollback:
-Elegir “Crear pedido”.
-Completar los datos.
-Forzar un error (ej.: dejar vacío el nombre del cliente).
-El pedido no se insertará en la BD gracias al rollback automático.
+# Para demostrar rollback:
 
-Enlace al video demostrativo
+-Elegir “Crear pedido”.
+-Completar los datos.
+-Forzar un error (ej.: dejar vacío el nombre del cliente).
+-El pedido no se insertará en la BD gracias al rollback automático.
+
+### Enlace al video demostrativo ###
 https://drive.google.com/file/d/1oeYpOI42iNfLOfUa_SgZoiFBnIMgG3Xy/view
