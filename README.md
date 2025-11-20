@@ -1,6 +1,4 @@
-# TPI-Programacion_2--Grupo_168
-
-Trabajo Practico Integrador - Grupo 168  
+# Trabajo Practico Integrador - Grupo 168  
 
 Sistema de Gestión de Pedidos y Envíos (Java + MySQL)
 Este proyecto implementa una aplicación de consola para gestionar Pedidos y Envíos, aplicando buenas prácticas de arquitectura por capas (Entidades, DAO, Servicios, Configuración y Menú).
@@ -13,7 +11,7 @@ Para el desarrollo del Trabajo Práctico Integrador, se ha seleccionado el domin
 
 # Requisitos:
 
-# Software:
+### Software:
 
 Java 17 o superior.
 MySQL 8.x.
@@ -21,7 +19,7 @@ Driver JDBC MySQL (mysql-connector-j).
 IDE (IntelliJ, NetBeans, Eclipse) o terminal.
 
 
-# Configuración necesaria
+# Configuración necesaria:
 
 -En el archivo:
 config/DatabaseConnection.java
@@ -35,7 +33,7 @@ private static final String PASSWORD = "";
 
 
 
-#Pasos de creación de base (SQL)
+# Pasos de creación de base (SQL)
 
 CREATE DATABASE IF NOT EXISTS tpiprogra2;
 USE tpiprogra2;
@@ -68,7 +66,7 @@ CREATE TABLE pedido (
 );
 
 
-#Datos de prueba
+# Datos de prueba
 
 USE tpiprogra2;
 
@@ -150,5 +148,5 @@ Buscar envío por ID
 -Forzar un error (ej.: dejar vacío el nombre del cliente).
 -El pedido no se insertará en la BD gracias al rollback automático.
 
-### Enlace al video demostrativo ###
+# Enlace al video demostrativo 
 https://drive.google.com/file/d/1oeYpOI42iNfLOfUa_SgZoiFBnIMgG3Xy/view
